@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用关键字new来调用这个函数，并返回一个实例对象 构造函数</title>
+</head>
+<body>
+<script>
+    function Student(name) {
+        this.name = name;
+        this.hello = function () {
+            alert('Hello, ' + this.name + '!');
+        }
+    }
+     Student.portortype.say(){
+        alert('q')
+    }
+    let student = new Student('小明')
+    // console.log(student.name)
+    // console.log(student.hello())
+    console.log(student.hello())
+
+</script>
+</body>
+</html>

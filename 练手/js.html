@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box{
+        color:red;
+        background: red;
+    }
+    li{
+        cursor: pointer;
+    }
+</style>
+<body>
+
+<ul id="abox">
+    <li class="box">a</li>
+    <li>a</li>
+    <li>a</li>
+    <li>a</li>
+    <li>a</li>
+    <li>a</li>
+</ul>
+
+
+<script>
+ window.location = function () {
+     var obox = document.getElementById(`abox`);
+      var ali = obox.getElementsByTagName('li');
+      console.log(ali)
+
+     for(var i = 0;i<ali.length;i++){
+         ali[i].index = i;
+         ali[i].onclick = function () {
+             for (var i = 0;i<ali.length;i++) {
+                 ali[i].className = ''
+             }
+             this.className = 'box';
+         }
+     }
+ }
+
+</script>
+</body>
+</html>

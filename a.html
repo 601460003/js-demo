@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="input1" >
+<input type="button" value="点击" id="btn">
+<script>
+
+    window.onload = function () {
+        let abtn = document.getElementById('btn');
+        abtn.onclick = function () {
+            let aInput = document.getElementById('input1').value;
+            //用户名的规则： 昵称的长度为1-15，包含任意的字母、数字、中文，不可以使用其他符号
+            let reg = /^([\u4e00-\u9fa5]|[a-zA-Z0-9]){1,15}$/i;
+            if(reg.test(aInput)){
+                alert('yes')
+                console.log(aInput)
+            }else {
+                alert('no')
+                console.log(aInput)
+
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

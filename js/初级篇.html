@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1、三目运算符
+    // let x=9
+    // const answer = x>10? console.log('hellow'):alert('hellow');
+    // 2、循环语句
+    //     for(let i =0;i<10;i++)
+    //     for(let index of list)
+    /**
+     *  // Array.find循环的简写。
+     *    function findDog(name) {
+          for(let i = 0; i<pets.length; ++i) {
+          if(pets[i].type === 'Dog' && pets[i].name === name) {
+           return pets[i];
+     */
+    const pets = [
+        { type: 'Dog', name: 'Max'},
+        { type: 'Cat', name: 'Karl'},
+        { type: 'Dog', name: 'Tommy'},
+    ]
+    pet = pets.find(pet => pet.type ==='Dog' && pet.name === 'Tommy');
+
+
+</script>
+
+</body>
+</html>

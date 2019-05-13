@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    window.onload = function () {
+        var aul = document.getElementById('highLight');
+        var ali = aul.getElementsByTagName('a');
+
+        for (var i = 0; i < ali.length; i++) {
+            ali[i].index = i;
+            ali[i].onclick = function () {
+                for (var i = 0; i < ali.length; i++) {
+                    ali[i].className = ''
+                }
+                this.className = 'action';
+            }
+        }
+        // var tensor_obj = document.getElementById("highLight");  //根据ID获取html元素
+        // var heigth_screen = window.screen.height;    //获取整个屏幕的分辨率
+        // var width_screen = window.screen.width;
+        // heigth_screen = heigth_screen * 0.85;        //在这里分配整个界面的85%给iframe来显示嵌套的界面
+        // tensor_obj.style.height = heigth_screen + "px";
+        // width_screen = width_screen * 0.85;
+        // tensor_obj.style.width = width_screen + "px";
+
+        autoheight();
+
+        function autoheight() {
+            var winHeight = 0;
+            if (window.innerHeight)
+                winHeight = window.innerHeight;
+            else if ((document.body) && (document.body.clientHeight))
+                winHeight = document.body.clientHeight;
+            if (document.documentElement && document.documentElement.clientHeight)
+                winHeight = document.documentElement.clientHeight;
+            document.getElementById("text").style.height = winHeight + "px";
+        }
+
+        window.onresize = autoheight; //浏览器窗口发生变化时同时变化DIV高度
+    }
+</script>
+</body>
+</html>

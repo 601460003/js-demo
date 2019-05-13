@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>当成员被标记成private时，它就不能在声明它的类的外部访问</title>
+</head>
+<body>
+<script>
+    /**
+     *原型定义方式
+     */
+    // function Student(name,age) {
+    //     this.name = name ;
+    //     this.age = age;
+    // }
+    //
+    // Student.prototype.hello = function () {
+    //     // alert('Hello, ' + this.name + '!')
+    // }
+    //
+    // let student = new Student('小明')
+    // student.hello()
+
+    /**
+     *新的CLASS定义方式
+     */
+    class Student{
+        constructor(name){
+            this.name = name
+        }
+        hello(){
+            alert('Hello, ' + this.name + '!')
+        }
+        word(){
+            alert(this.name)
+        }
+        perpon = [1,2,3,4]
+    }
+
+    var xiaohong = new Student('小红');
+    console.log(xiaohong.hello())
+
+    // class Greeter {
+    //     greeting: string;
+    //     constructor(message: string) {
+    //         this.greeting = message;
+    //     }
+    //     greet() {
+    //         return "Hello, " + this.greeting;
+    //     }
+    // }
+    //
+    // let greeter = new Greeter("world");
+    // console.log(greeter)
+</script>
+</body>
+</html>

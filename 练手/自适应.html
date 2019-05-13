@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="bod" >
+<div>
+
+</div>
+<script>
+
+    var offsetWid = document.documentElement.clientWidth; //实际的宽度
+    var offsetHei = document.documentElement.clientHeight;//实际的高度
+  document.write(offsetWid)
+    document.write(offsetHei)
+    var obody = document.getElementById('bod')
+    console.log(window.innerHeight)
+    console.log(window.onresize)
+
+
+</script>
+<style>
+    body{
+        background: greenyellow;
+
+    }
+    div{
+        min-height: 720px;
+        background: green;
+
+    }
+</style>
+</body>
+</html>

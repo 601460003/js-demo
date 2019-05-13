@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arguments指向当前函数的调用者传入的所有参数</title>
+</head>
+<body>
+<script>
+    function abs(x) {
+        if (typeof x !== 'number') {
+            throw 'Not a number';
+        }
+        if (x >= 0) {
+            return x;
+        } else {
+            return -x;
+        }
+    }
+    alert(    abs(-10)
+    )
+</script>
+</body>
+</html>

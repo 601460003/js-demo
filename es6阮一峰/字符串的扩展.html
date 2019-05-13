@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (let codePoint of 'foo') {
+        console.log(codePoint)
+    }
+// 字符串模板
+    $('#result').append(
+        'There are <b>' + basket.count + '</b> ' +
+        'items in your basket, ' +
+        '<em>' + basket.onSale +
+        '</em> are on sale!'
+    )
+
+    $('#result').append(`There are${basket.count}items in your basket${basket.onSale}are on sale`.trim())
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>Title</title>
+</head>
+<head>
+    <title>jquery中on()绑定事件方式</title>
+    <style type="text/css">
+        .container
+        {
+            width: 300px;
+            height: 300px;
+            border: 1px #ccc solid;
+            background-color: Green;
+        }
+        .btn-test
+        {
+            border: 1px #ccc solid;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            /*********添加单个事件处理*********/
+
+            $(".header").on("click", ".btn-test", function () {
+                //显示隐藏div
+                $(".container").slideToggle();
+            });
+
+            /********添加多个事件处理********/
+
+            //空格相隔方式
+            $(".header").on("mouseout click", ".btn-test", function () {
+                //显示隐藏div
+                $(".container").slideToggle();
+            });
+
+            //大括号替代方式
+            $(".header").on({
+                "mouseout": function () {
+                    alert("这是mouseout事件!");
+                },
+                "click": function () {
+                    $(".container").slideToggle();
+                }
+            }, ".btn-test");
+
+            //删除事件
+            $(".header").off("click", ".btn-test");
+
+        });
+    </script>
+</head>
+<body>
+<div class="header">
+    <input type="button" value="按钮" class="btn-test" />
+</div>
+<div class="container">
+</div>
+
+</body>
+</html>

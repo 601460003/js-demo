@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="oinput">
+
+<script>
+    class Validata {
+        constructor(value,len) {
+            this.value = value;
+            this.len = len
+        }
+        // 身份证
+        checkIdNum(value,len){
+            const reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/
+        }
+
+        //用户名正则，4到16位（字母，数字，下划线，减号）
+        user(value,len){
+            var uPattern = /^[a-zA-Z0-9_-]{4,16}$/;
+        }
+
+        maxLength(value,len) {
+            if (value.length > len) return '长度不得超过' + len + '位'
+        }
+        minLength(value,len) {
+            if (value.length < len) return '长度不得小于' + len + '位'
+        }
+        between(value,len) {
+
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    class  Validation{
+        constructor(value){
+            this.value = value
+        }
+      //验证身份证
+        checkIdNum(value){
+            const reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/
+            if (!value) {
+                // return callback(new Error('证件号码不能为空'))
+            } else if (!reg.test(value)) {
+                // return callback(new Error('证件号码不正确'))
+            } else {
+                // callback()
+            }
+        }
+        //验证证书
+        checkInterNum(value){
+            const reg = /^[0-9]*[1-9][0-9]*$/
+            if (!value) {
+                return callback(new Error('请填写整数'))
+            } else if (!reg.test(value)) {
+                // return callback(new Error('请输入整数'))
+            } else {
+                // callback()
+            }
+        }
+    }
+    var v = new Validation()
+    console.log(v.checkIdNum())
+</script>
+</body>
+</html>

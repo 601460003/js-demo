@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array、Map和Set都属于iterable类型。</title>
+</head>
+<body>
+<div>
+    for ... in循环将把name包括在内，但Array的length属性却不包括在内。
+    for ... of循环则完全修复了这些问题，它只循环集合本身的元素：
+</div>
+<script>
+    /**
+     *  Map是一组键值对的结构，具有极快的查找速度。
+     *  for ... of循环是ES6引入的新
+     */
+    var m = new Map(); // 空Map
+    m.set('Adam', 67); // 添加新的key-value
+    m.set('Bob', 59);
+    m.has('Adam'); // 是否存在key 'Adam': true
+    m.get('Adam'); // 67
+    m.delete('Adam'); // 删除key 'Adam'
+    m.get('Adam'); // undefined
+    for(var s of m){
+      console.log(s)
+    }
+</script>
+</body>
+</html>
