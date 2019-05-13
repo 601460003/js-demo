@@ -30,3 +30,33 @@
 </script>
 </body>
 </html>
+$rootScope :全局作用域
+$scope：局部作用域 相当于this
+$ionicLoading：用一个覆盖层表示当前处于活动状态，来阻止用户的交互动作。
+$state:路由
+$window：浏览器窗口对象的引用
+wx.onMenuShareTimeline()：微信“分享到朋友圈”接口—
+wx.onMenuShareAppMessage:— 分享给朋友接口
+$timeout:延时定时器，只能用angular里面的语法
+$interval：间隔
+app.service：自定义服务
+
+                                  AngularJS常用指令 不能直接在html上写JS --》只能通过NG指令
+ng-repeat    遍历数据（字符串）
+ng-options  创建下拉菜单（对象）：<select ng-init="selectedName = names[0]" ng-model="selectedName" ng-options="x for x in names"></select>
+ng-app       绑定容器   
+ng-show      显示或隐藏
+ng-hide
+ng-controller  绑定事件
+$even 偶数
+$odd   奇数
+ng-disabled
+ng-click 点击事件 
+
+创建模块：angular.module 函数来创建模块：
+
+4种开发模式
+1 vaule 定义变量 是可以改变的
+2 constant 定义一个常量 是不能改变的 常用于http
+3 factory 工厂模式 直接生产好return直接使用
+4.service 服务模式 也是函数
